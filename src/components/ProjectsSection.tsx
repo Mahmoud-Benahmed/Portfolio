@@ -1,23 +1,24 @@
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Eye, Code } from "lucide-react"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
-import { useState } from "react"
-import setup3dImg from "@/assets/setup3d.png";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github, Eye, Code } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { useState } from "react";
+import setup3dImg from "@/assets/Setup3d.png";
 import MareAlbs from "@/assets/MareAlbs.png";
 
 const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState<{ [key: string]: string }>({})
+  const [activeTab, setActiveTab] = useState<{ [key: string]: string }>({});
 
   const featuredProject = {
     title: "MareAlbs",
     description:
-      "Centre de contrôle des Marealbs,Gérez et surveillez vos opérations avec précision et facilité. Accédez aux données en temps réel et aux systèmes de contrôle depuis n'importe où. this mobile app provides a comprehensive control center for monitoring and managing operations.",
+      "Centre de contrôle des Marealbs,Gérez et surveillez vos opérations avec précision et facilité. Accédez aux données en temps réel et aux systèmes de contrôle depuis n'importe où. This mobile app provides a comprehensive control center for monitoring and managing operations.",
     image: MareAlbs,
     technologies: ["React Native", "SQL Lite"],
     githubUrl: "https://github.com/Mahmoud-Benahmed/MareAlbs",
     liveUrl: "#",
     featured: false,
-  }
+  };
+
   const otherProjects = [
     {
       title: "Setup 3D",
@@ -30,7 +31,7 @@ const ProjectsSection = () => {
     {
       title: "LocationImmobiler",
       description: "Interactive real estate rental project.",
-      image: "",
+      image: null, // No image yet
       technologies: ["SpringBoot", "Angular", "MySQL"],
       githubUrl: "#",
       status: "In Development",
@@ -38,18 +39,16 @@ const ProjectsSection = () => {
     {
       title: "TripLy",
       description: "Flutter application with modern UI/UX design and real-time features.",
-      image: "",
+      image: null, // No image yet
       technologies: [".NET", "Angular", "MongoDB"],
       githubUrl: "#",
       status: "Coming Soon",
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-20 relative">
-      {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-secondary opacity-5" />
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
@@ -73,22 +72,13 @@ const ProjectsSection = () => {
                     <div className="h-128 bg-gradient-primary/10 border border-accent/20 rounded-xl flex items-center justify-center overflow-hidden">
                       {featuredProject.image ? (
                         <img
-                          src={featuredProject.image || "/MareAlbs.png"}
+                          src={featuredProject.image}
                           alt={featuredProject.title}
                           className="w-full h-full object-cover"
                         />
                       ) : (
                         <div className="text-text-muted text-sm">No preview available</div>
                       )}
-                    </div>
-                  </TabsContent>
-
-                  <TabsContent value="source" className="mt-4">
-                    <div className="aspect-video bg-gradient-primary/10 border border-accent/20 rounded-xl flex items-center justify-center p-4">
-                      <div className="text-center">
-                        <Code size={32} className="text-accent/50 mx-auto mb-2" />
-                        <p className="text-text-muted text-sm">View source code on GitHub</p>
-                      </div>
                     </div>
                   </TabsContent>
                 </Tabs>
@@ -100,7 +90,6 @@ const ProjectsSection = () => {
                   <h3 className="text-2xl font-bold text-text-primary mb-4">{featuredProject.title}</h3>
                   <p className="text-text-secondary leading-relaxed">{featuredProject.description}</p>
                 </div>
-                {/* Technologies */}
                 <div>
                   <p className="text-text-muted text-sm font-medium mb-3">Technologies Used:</p>
                   <div className="flex flex-wrap gap-2">
@@ -114,7 +103,6 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                 </div>
-                {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button
                     asChild
@@ -156,22 +144,13 @@ const ProjectsSection = () => {
                   <div className="h-96 bg-gradient-primary/10 border border-accent/20 rounded-lg flex items-center justify-center overflow-hidden mb-4">
                     {project.image ? (
                       <img
-                        src={project.image || "/Setup3d.png"}
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover"
                       />
                     ) : (
                       <div className="text-text-muted text-xs">No preview available</div>
                     )}
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="source" className="mt-4">
-                  <div className="aspect-video bg-gradient-primary/10 border border-accent/20 rounded-lg flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <Code size={24} className="text-accent/50 mx-auto mb-2" />
-                      <p className="text-text-muted text-xs">View source code on GitHub</p>
-                    </div>
                   </div>
                 </TabsContent>
               </Tabs>
@@ -237,7 +216,7 @@ const ProjectsSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProjectsSection
+export default ProjectsSection;
