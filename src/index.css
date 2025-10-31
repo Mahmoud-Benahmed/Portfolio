@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 13% 9%;
+    
+    --sidebar-bg: 0 0% 100%;
+    --sidebar-border: 220 13% 85%;
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 70%), hsl(25 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 100% 65%), hsl(330 100% 70%), hsl(25 100% 60%));
+    --gradient-subtle: linear-gradient(135deg, hsl(280 10% 95%), hsl(25 10% 95%));
+    --purple-primary: 280 100% 70%;
+    --purple-secondary: 280 80% 60%;
+    --orange-primary: 25 100% 65%;
+    --orange-secondary: 25 80% 55%;
+    --text-primary: 220 13% 9%;
+    --text-secondary: 220 13% 25%;
+    --text-muted: 220 13% 40%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+    --hover-accent: 280 100% 75%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 9%;
+    --card-border: 220 13% 90%;
+    --input: 0 0% 98%;
+    --input-border: 220 13% 85%;
+    --input-foreground: 220 13% 9%;
+    --success: 142 76% 36%;
+    --warning: 48 96% 53%;
+    --error: 0 84% 60%;
+    --radius: 0.5rem;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 13% 9%;
+    --foreground: 0 0% 95%;
+    --sidebar-bg: 220 13% 9%;
+    --sidebar-border: 220 13% 15%;
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 70%), hsl(25 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 100% 65%), hsl(330 100% 70%), hsl(25 100% 60%));
+    --gradient-subtle: linear-gradient(135deg, hsl(280 50% 15%), hsl(25 50% 15%));
+    --text-primary: 0 0% 95%;
+    --text-secondary: 0 0% 75%;
+    --text-muted: 0 0% 60%;
+    
+    /* Card and surface colors */
+    --card: 220 13% 12%;
+    --card-foreground: 0 0% 95%;
+    --card-border: 220 13% 18%;
+    
+    /* Input and form elements */
+    --input: 220 13% 15%;
+    --input-border: 220 13% 25%;
+    --input-foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--card-border));
+  }
+
+  body {
+    @apply text-foreground;
+    background: hsl(var(--background));
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Typing animation */
+  .typing-animation {
+    overflow: hidden;
+    border-right: 3px solid hsl(var(--accent));
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-bg-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-bg-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  /* Skill progress bars */
+  .skill-bar {
+    background: hsl(var(--input));
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .skill-progress {
+    background: var(--gradient-primary);
+    height: 100%;
+    border-radius: var(--radius);
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Hover effects */
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 10px 30px -10px hsl(var(--accent) / 0.3);
+    transform: translateY(-2px);
+  }
+  
+  /* Navigation active state */
+  .nav-active {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+  
+  .nav-active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+  }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: hsl(var(--accent)); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
