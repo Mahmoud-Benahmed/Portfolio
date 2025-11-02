@@ -5,7 +5,7 @@ const AboutSection = () => {
     { icon: User, label: "Name", value: "Mahmoud Ben Ahmed" },
     { icon: Calendar, label: "Age", value: "22 years old" },
     { icon: MapPin, label: "Location", value: "Sousse, Tunisia" },
-    { icon: Briefcase, label: "Status", value: "IT Student & Developer" },
+    { icon: Briefcase, label: "Status", value: "Final-Year IT Student" },
   ]
 
   return (
@@ -72,17 +72,16 @@ const AboutSection = () => {
                   Hello there! My name is <span className="gradient-text">Mahmoud Ben Ahmed</span>.
                 </p>
                 <p className="text-text-secondary leading-relaxed text-sm sm:text-base md:text-lg">
-                  I'm a multimedia and web developer passionate about creating smart, human-centered digital products.
-                  My focus is on integrating AI tools into design workflows to enhance creativity and usability
+                  I’m a multimedia and web developer passionate about creating smart, human-centered digital products. I integrate AI tools into design workflows to boost creativity and usability, while also exploring visual storytelling through photography.
                 </p>
               </div>
 
               {/* Quote */}
               <blockquote className="bg-gradient-subtle/50 border border-accent/20 rounded-lg p-4 sm:p-5 md:p-6 backdrop-blur-sm">
                 <p className="text-text-secondary italic mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base">
-                  "Design is not just what it looks like and feels like. Design is how it works."
+                  "Design is not just what it looks like and feels like.Design is how it works."
                 </p>
-                <cite className="text-text-muted text-xs sm:text-sm">- Steve Jobs</cite>
+                <cite className="text-text-muted text-xs sm:text-sm">Steve Jobs</cite>
               </blockquote>
             </div>
 
@@ -90,8 +89,7 @@ const AboutSection = () => {
             <div className="bg-card border border-card-border rounded-xl p-4 sm:p-5 md:p-6">
               <h4 className="text-text-primary font-semibold mb-2 sm:mb-3 text-base sm:text-lg">About My Work</h4>
               <p className="text-text-secondary leading-relaxed text-sm sm:text-base">
-                I blend creativity, design, and emerging AI tools to craft interactive and intelligent digital
-                experiences that make technology feel more human
+                I blend creativity, design, and emerging AI tools to craft interactive and intelligent digital experiences that feel more human while also capturing visual stories through my passion for photography
               </p>
             </div>
           </div>

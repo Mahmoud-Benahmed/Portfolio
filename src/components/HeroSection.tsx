@@ -59,7 +59,7 @@ const HeroSection = () => {
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary font-medium">
-                Creative Technologist | AI-Driven Designer & Web Developer
+               🎨 Creative Technologist | 🤖 AI-Driven Designer & 🌐 Web Developer | 📸 Photography Enthusiast
               </p>
 
               <p className="text-xs sm:text-sm md:text-base lg:text-lg text-text-secondary leading-relaxed">
@@ -167,7 +167,7 @@ const HeroSection = () => {
               "I'm a multimedia and web developer passionate about creating smart, human-centered digital products"
             </p>
             <cite className="block mt-3 sm:mt-4 md:mt-6 lg:mt-8 text-accent font-semibold text-xs sm:text-sm md:text-base lg:text-lg">
-              - Mahmoud Ben Ahmed
+            Mahmoud Ben Ahmed
             </cite>
           </blockquote>
         </div>

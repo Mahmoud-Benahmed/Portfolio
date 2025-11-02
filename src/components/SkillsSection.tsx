@@ -79,7 +79,6 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20 lg:mb-24 animate-fade-in-up">
-          <p className="text-accent font-medium mb-4 tracking-wide uppercase text-sm md:text-base">Skills</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text">MY SKILLS</h2>
         </div>
 
@@ -150,8 +149,7 @@ const SkillsSection = () => {
             <div className="p-6 md:p-8 bg-gradient-subtle/30 border border-accent/20 rounded-xl backdrop-blur-sm">
               <h4 className="font-semibold text-text-primary mb-3 text-base md:text-lg">Continuous Learning</h4>
               <p className="text-text-secondary text-sm md:text-base leading-relaxed">
-                I'm constantly expanding my skill set and exploring how AI and emerging technologies can enhance web
-                development, mobile experiences, and digital design.
+                I'm constantly expanding my skill set and exploring how AI and emerging technologies can enhance web development, mobile experiences, and digital design while also improving my craft in photography and visual storytelling.
               </p>
             </div>
           </div>
