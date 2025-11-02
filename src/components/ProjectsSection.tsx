@@ -14,7 +14,8 @@ import jijelNatureImage from "@/assets/Nature/NatureJijel.jpg"
 import ElectricSkyImage from "@/assets/Sunset/ElectricSky.jpg"
 import SilhouetteSunsetImage from "@/assets/Sunset/SilhouetteImage.jpg"
 import TwilightGradientImage from "@/assets/Sunset/TwilightGradient.jpg"
-
+import TripCollabImg from "@/assets/Projects/Trip Collab.png"
+import RentHouseImage from "@/assets/Projects/RentHouse.png"
 type Project = {
   id: string
   title: string
@@ -31,8 +32,6 @@ const ProjectsSection = () => {
     src: string
     title: string
   } | null>(null)
-
-  // Web Development Projects
   const webProjects: Project[] = [
     {
       id: "marealbs",
@@ -61,11 +60,9 @@ const ProjectsSection = () => {
       status: "Coming Soon",
     },
   ]
-
-  // Multimedia Projects
   const multimediaProjects: Project[] = [
     {
-      id: "setup3d",
+      id: "blender",
       title: "Setup 3D",
       description:
         "A fully designed 3D setup created in Blender, combining realistic modeling, lighting, and textures to bring a digital environment to life. This project demonstrates advanced 3D design and visualization skills.",
@@ -73,9 +70,25 @@ const ProjectsSection = () => {
       technologies: ["Blender", "3D Modeling", "Rendering"],
       status: "Completed",
     },
+    {
+      id: "UxUiDesign",
+      title: "Travel Journal & Trip Planning Mobile App UI",
+      description:
+        "A modern mobile application interface designed for travel journaling and trip planning.",
+      image: TripCollabImg,
+      technologies: ["UX/UI Design", "Figma"],
+      status: "Completed",
+    },
+    {
+      id: "UxUiDesign",
+      title: "Luxury Real Estate Property Card Mobile App UI",
+      description:
+        "A modern mobile real estate application interface featuring a detailed property listing card.",
+      image: RentHouseImage,
+      technologies: ["UX/UI Design", "Figma"],
+      status: "Completed",
+    },
   ]
-
-  // Photography Projects
   const photographyProjects: Project[] = [
     {
       id: "portrait1",
@@ -154,8 +167,6 @@ const ProjectsSection = () => {
       status: "Completed",
     },
   ]
-
-  // Render function
   const renderProjects = (projects: Project[]) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
       {projects.map((project, index) => (
