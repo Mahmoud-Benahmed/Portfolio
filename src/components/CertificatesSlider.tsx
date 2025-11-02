@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import PromptEngineeringImage from "@/assets/Prompt Engineering.png"
-import GenerativeAIImage from "@/assets/Generative ai.png"
+import PromptEngineeringImage from "@/assets/Certificates/Prompt engineering.png"
+import GenerativeAIImage from "@/assets/Certificates/Generative ai.png"
 
 interface Certificate {
   id: number
