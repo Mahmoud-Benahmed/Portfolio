@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import PromptEngineeringImage from "@/assets/Certificates/Prompt Engineering.png"
 import GenerativeAIImage from "@/assets/Certificates/Generative ai.png"
-
+import HasghrapDevelopperIMG from "@/assets/Certificates/HashgraphDeveloper.png"
 interface Certificate {
   id: number
   name: string
@@ -24,6 +24,11 @@ const CertificatesSlider = () => {
       id: 2,
       name: "Generative AI in Design",
       image: GenerativeAIImage,
+    },
+    {
+      id: 3,
+      name: "Hasghrap Developer",
+      image: HasghrapDevelopperIMG,
     },
   ]
 
