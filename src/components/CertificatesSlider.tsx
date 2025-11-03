@@ -27,7 +27,7 @@ const CertificatesSlider = () => {
     },
     {
       id: 3,
-      name: "Hasghrap Developer",
+      name: "Hashgraph Developer",
       image: HasghrapDevelopperIMG,
     },
   ]

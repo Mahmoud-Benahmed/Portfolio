@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react"
 import CertificatesSlider from "./CertificatesSlider"
+import { SiHtml5, SiTailwindcss, SiBlender, SiUnity, SiAdobeillustrator,
+         SiReact, SiAndroidstudio, SiFigma, SiWordpress,
+         SiSpringboot, SiDotnet, SiOdoo, SiN8N, SiGit} from "react-icons/si";
+
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -24,23 +28,26 @@ const SkillsSection = () => {
     { name: "Spring Boot", percentage: 80 },
     { name: "N8N", percentage: 60 },
     { name: ".NET", percentage: 40 },
+    { name: "GIT", percentage: 80 },
   ]
 
   const skillCards = [
-    { name: "HTML", icon: "🔥", color: "from-orange-500 to-red-500" },
-    { name: "Tailwind CSS", icon: "🌊", color: "from-teal-400 to-blue-500" },
-    { name: "React Native", icon: "📱", color: "from-cyan-500 to-blue-600" },
-    { name: "Android Studio", icon: "🤖", color: "from-green-500 to-emerald-500" },
-    { name: "Adobe Illustrator", icon: "🎨", color: "from-orange-500 to-pink-500" },
-    { name: "Spring Boot", icon: "🌱", color: "from-green-600 to-green-800" },
-    { name: "Odoo", icon: "🟣", color: "from-purple-500 to-purple-700" },
-    { name: "Blender", icon: "🎭", color: "from-orange-500 to-yellow-500" },
-    { name: "Unity", icon: "🎮", color: "from-gray-600 to-gray-800" },
-    { name: "Figma", icon: "🎨", color: "from-purple-500 to-pink-500" },
-    { name: "WordPress", icon: "📝", color: "from-blue-600 to-indigo-600" },
-    { name: ".NET", icon: "💠", color: "from-blue-600 to-indigo-500" },
-    { name: "N8N", icon: "🤖", color: "from-orange-400 to-amber-500" },
-  ]
+  { name: "HTML", icon: <SiHtml5 size={45} />, color: "from-orange-500 to-red-500" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss size={45} />, color: "from-cyan-500 to-blue-500" },
+  { name: "React Native", icon: <SiReact size={45} />, color: "from-cyan-500 to-blue-600" },
+  { name: "Android Studio", icon: <SiAndroidstudio size={45} />, color: "from-green-500 to-emerald-500" },
+  { name: "Adobe Illustrator", icon: <SiAdobeillustrator size={45} />, color: "from-orange-500 to-pink-500" },
+  { name: "Spring Boot", icon: <SiSpringboot size={45} />, color: "from-green-600 to-green-800" },
+  { name: "Odoo", icon: <SiOdoo size={45} />, color: "from-purple-500 to-purple-700" },
+  { name: "Blender", icon: <SiBlender size={45} />, color: "from-orange-500 to-yellow-500" },
+  { name: "Unity", icon: <SiUnity size={45} />, color: "from-gray-600 to-gray-800" },
+  { name: "Figma", icon: <SiFigma size={45} />, color: "from-purple-500 to-pink-500" },
+  { name: "WordPress", icon: <SiWordpress size={45} />, color: "from-blue-600 to-indigo-600" },
+  { name: ".NET", icon: <SiDotnet size={45} />, color: "from-blue-600 to-indigo-500" },
+  { name: "N8N", icon: <SiN8N size={45} />, color: "from-orange-400 to-amber-500" },
+   { name: "GIT", icon: <SiGit size={45} />, color: "from-orange-400 to-amber-500" },
+]
+
 
   const addCertificate = () => {
     if (newCertificate.trim()) {
